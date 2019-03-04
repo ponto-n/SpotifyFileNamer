@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyFileNamer", "IndependentProject\SpotifyFileNamer.csproj", "{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|ARM.Build.0 = Debug|ARM
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|x64.ActiveCfg = Debug|x64
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|x64.Build.0 = Debug|x64
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|x64.Deploy.0 = Debug|x64
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|x86.ActiveCfg = Debug|x86
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|x86.Build.0 = Debug|x86
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Debug|x86.Deploy.0 = Debug|x86
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|Any CPU.ActiveCfg = Release|x86
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|ARM.ActiveCfg = Release|ARM
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|ARM.Build.0 = Release|ARM
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|ARM.Deploy.0 = Release|ARM
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|x64.ActiveCfg = Release|x64
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|x64.Build.0 = Release|x64
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|x64.Deploy.0 = Release|x64
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|x86.ActiveCfg = Release|x86
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|x86.Build.0 = Release|x86
+		{1ECB4B63-33D5-47F0-861B-5597BE1C5EC2}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {685C2706-916F-4189-A0B6-C34EB75B4C8E}
+	EndGlobalSection
+EndGlobal

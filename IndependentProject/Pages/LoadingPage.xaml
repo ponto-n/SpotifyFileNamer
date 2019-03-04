@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="IndependentProject.Pages.LoadingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IndependentProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:IndependentProject.Models_View"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ContentDialog Name="InformUserContentDialog" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Some of your tracks have multiple possible albums" Margin="20" HorizontalAlignment="Center"/>
+                <Button Content="Ok" Click="DialogButton_Click" Margin="20" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </ContentDialog>
+
+        <!--This lets the user choose from a list of albums-->
+        <ContentDialog Name="SelectTrackContentDialog" VerticalAlignment="Center" MaxWidth="1000" Background="{ThemeResource AppBarBackgroundThemeBrush}" BorderBrush="{ThemeResource ButtonBackgroundThemeBrush}">
+        <GridView 
+                Name="SelectTrackGridView"  
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.HorizontalScrollMode="Enabled"
+                ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                ItemClick="GridView_ItemClick"
+                MaxHeight="300"
+                IsItemClickEnabled="True">
+
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsStackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+
+            <GridView.ItemTemplate>
+
+
+                <DataTemplate x:DataType="data:SpotifySongInfo">
+                    <StackPanel Background="{ThemeResource AppBarItemDisabledForegroundThemeBrush}" BorderBrush="{ThemeResource ButtonForegroundThemeBrush}" BorderThickness="3" >
+                            <TextBlock Margin="10" Text="{x:Bind trackTitle}" HorizontalAlignment="Center" />
+                            <Image Source="{x:Bind imageUrl}" HorizontalAlignment="Center" Width="180" Height="180" Margin="20,0"/>
+                            <TextBlock Margin="10" Text="{x:Bind shortAlbum}" HorizontalAlignment="Center" Foreground="{ThemeResource ButtonForegroundThemeBrush}" />
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        </ContentDialog>
+
+        <!--The inner grid-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Row="0">
+                <TextBlock Name="CompletedSongsTextBlock" Margin="20,0"/>
+            </ScrollViewer>
+
+            <ProgressBar Name="CompletionProgressBar" Margin="20" Grid.Column="1" Grid.Row="1" Height="30" HorizontalAlignment="Center" Width="600"/>
+
+            <!--Grid for the buttons-->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="CancelButtonGridColumn" Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Name="CancelButton" Grid.Column="0" Content="Cancel" HorizontalAlignment="Center" Margin="20" Click="CancelButton_Click" />
+                <Button Name="FinishButton" Grid.Column="1" Content="Finish" HorizontalAlignment="Center" Margin="20" Click="FinishButton_Click" Style="{StaticResource ApplicationAccentedButtonStyle}" />
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
